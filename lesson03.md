@@ -112,4 +112,31 @@ obj = { 'nome': 'João', 'role': 'filho' }
 
 <br />
 
-As chaves(`nome` e `role`) são informadas entre aspas para que o *runtime* do Python não interprete os nomes das chaves como variáveis e incorra em erro. 
+As chaves(`nome` e `role`) são informadas entre aspas para que o *runtime* do Python não interprete os nomes das chaves como variáveis e incorra em erro.
+
+Podemos declarar através de uma sentença, por exemplo:
+
+```
+obj = { x: x ** 2 for x in range(1, 10, 3)}
+# saída: {1: 1, 4: 16, 7: 49}
+```
+
+<br />
+
+É possível também declarar utilizando o construtor `dict()`:
+
+```
+obj = dict([('x', 10), ('y', 20)])
+```
+
+<br />
+
+## Tipos de Sequência Binária
+
+<br />
+
+> Bytes (*bytes*)
+ 
+> ByteArray (*bytearray*)
+
+> MemoryView (*memoryview*)

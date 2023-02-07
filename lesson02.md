@@ -3,9 +3,9 @@
 ### Objetivos:
 
 - Apresentar o terminal interativo do Python;
-- Estruturas condicionais(se, senão se, senão) e de repetição(enquanto, para);
-- Funções e reutilização de código;
-- Escrita e importação de módulos.
+- Apresentar a sintaxe de declaração de variáveis, operadores matemáticos, de comparação e lógicos
+
+<br />
 
 Normalmente, distribuições Linux e Mac já possuem uma versão do Python instalada. Isso acontece porque esses sistemas já utilizam a linguagem em diversos programas essenciais.
 
@@ -95,3 +95,13 @@ Os operadores lógicos "e" e "ou" são declarados como `and` e `or`:
 $ True and False # comparação lógica E, saída: False
 $ True or False # comparação lógica OU, saída: True
 ```
+
+<br />
+
+Finalmente, vamos chegar ao nosso "hello world". É muito simples, basta digitar o seguinte em nosso terminal:
+
+```
+print("hello, world!")
+```
+
+Well done! Rs

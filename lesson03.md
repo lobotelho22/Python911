@@ -40,6 +40,24 @@ Serve para representar números complexos, da forma `3+2j`, onde temos uma parte
 
 Listas são sequências mutáveis, utilizadas costumeiramente para armazenarmos itens homogêneos. Podemos declarar uma lista colocando seus itens entre colchetes: `listinha = [3, 5, 7, 11, 13]` ou pelo construtor `list()` colocando o valor da lista no interior dos parêntesis. Nossa `listinha` poderia ser declarada: `listinha = list((3, 5, 7, 11, 13))`.
 
+```
+$ colors = ["black", "orange", "grey"] # os elementos devem vir entre colchetes e separdos por vírgulas
+
+$ colors[1] # saída: "orange". Acessamos seus elementos através do index, que se inicia em 0, como nas Arrays do JavaScript
+
+$ colors[-1] # saída: "grey". Podemos acessar as propriedades em ordem inversa, iniciando por -
+
+$ colors.append("yellow") # o método append inclui elementos em uma lista
+
+$ colors.remove("black") # o método remove elimina um elemento de uma lista
+
+$ colors.extend(["green", "rose", "lilac"]) # o método extend inclui os elementos de uma nova lista, na lista de origem
+
+$ colors.index("rose") # retorna o número do index do elemento dado
+
+$ colors.sort() # o método sort organiza uma lista
+```
+
 <br />
 
 > Tuplas (*tuples*)
@@ -84,6 +102,20 @@ Declaramos um conjunto igualando uma variável a uma coleção de itens entre ch
 cariocas = set(['Flamengo', 'Botafogo', 'Fluminense', 'Vasco'])
 ```
 
+Métodos mais comuns associados ao tipo `set`:
+
+```
+soccer_cards = { "red", "yellow" } # declaramos um set entre chaves e separando os elementos por vírgulas
+
+soccer_cards.add("blue") # adiciona um elemento ao conjunto. Se por acaso o elemento já existe no conjunto, nada é alterado
+
+soccer_cards.union({ "green" }) # retorna o conjunto união com um conjunto passado por parâmetro
+
+soccer_cards.intersection({"red", "magenta"}) # retorna o conjunto interseção com um conjunto passado por parâmetro
+
+soccer_cards.difference({"red", "magenta"}) # retorna o conjunto diferença em relação ao conjunto passado por parâmetro
+```
+
 <br />
 
 > Frozenset(*frozenset*)
@@ -93,6 +125,19 @@ São conjuntos que não podem ser modificados. São declarados através do const
 ```
 cariocas = frozenset(['Flamengo', 'Botafogo', 'Fluminense', 'Vasco'])
 ```
+
+Esses são os principais métodos associados aos `frozenset`:
+
+```
+$ permissions = frozenset(["member", "group"])  # assim como o set, qualquer estrutura iterável pode ser utilizada para criar um frozenset
+
+$ permissions.union({"user"})  # novos conjuntos imutáveis podem ser criados à partir do original, mas o mesmo não pode ser modificado
+
+$ permissions.intersection({"user", "member"})  # retorna um conjunto resultante da intersecção dos conjuntos
+
+$ permissions.difference({"user"})  # retorna a diferença entre os dois conjuntos
+```
+
 
 <br />
 
@@ -140,3 +185,4 @@ obj = dict([('x', 10), ('y', 20)])
 > ByteArray (*bytearray*)
 
 > MemoryView (*memoryview*)
+> 

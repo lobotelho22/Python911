@@ -80,6 +80,8 @@ Pensemos no seguinte: um programa de computador deve atender instruções muito 
 ### Depuração
 > Erros de programação são chamados bugs e o processo de rastreá-los se chama debugging(depuração). (...) Aprender a depurar erros pode ser frustrante, mas é uma habilidade valiosa, útil para muitas atividades além da programação.
 
+<br />
+
 ## [2 - Variáveis, Expressões e Instruções][4]
 
 Um dos pontos mais essenciais de um programa é a possibilidade manipular variáveis e seus valores.
@@ -155,6 +157,18 @@ Uma *instrução* é uma unidade de código que tem um efeito. São exemplos de 
 $ n = 15
 $ print("espere por mim, morena")
 ```
+
+<br />
+
+### Depuração
+
+<br />
+
+Os três tipos de erros em um programa são:
+
+- **Erro de Sintaxe -** este se refere à estrutura da linguagem ou do código e suas regras. Havendo um erro de sintaxe, o Python exibirá uma mensagem de erro, impedindo a execução do programa. Por exemplo, um parêntesis esquecido ou um nome de comando digitado errado;
+- **Erro de Tempo de Execução (Runtime Error) -** é um erro que não aparece, até que o programa seja executado. São também chamados *exceções*;
+- **Erro Semântico -** é um tipo de erro silencioso, pois não se refere à forma de algo, mas a seu conteúdo. É o caso por exemplo de uma função que não executa bem o que se espera dela, ou uma atribuição de valor errado à uma variável. Esse erro só é possível de ser detectado por um trabalho de engenharia reversa, até que se encontre no código o que o está provocando.
 
 [1]: https://github.com/PenseAllen/PensePython2e
 [2]: https://penseallen.github.io/PensePython2e/

@@ -1,20 +1,84 @@
-# Python 911
+# Entrada e Saída de Dados
 
-- Apresentar a linguagem de progamação: sua história e seus usos.
+## Objetivos
+
+- Preparar um ambiente de projeto em Python, definindo sua estrutura de objetos e criando ambientes isolados;
+- Instalar bibliotecas de terceiros em um projeto Python;
+- Entender como lidar com exceções em Python;
+- Receber dados de pessoas usuárias, assim como enviá-los de volta;
+- Ler e escrever arquivos no formato tabular `CSV`;
+- Serializar e desserializar dados no formato `JSON`.
 
 <br />
 
-## O Python
-#### "Venha pela linguagem, fique pela comunidade"
+## Módulo
 
 <br />
 
-Python é uma linguagem de programação que prima pela simplicidade de sua sintaxe e legibilidade do código. Seu interpretador pode ser executado nos mais diversos sistemas operacionais, sem mudanças significativas no código.
+Um módulo é um arquivoque contém definições e instruções em Python. Esses arquivos tem exenção `.py`. De modo geral, qualquer arquivo Python é em si um módulo e pode ser importado por ouro arquivo Python. De forma que estarão disponíveis para utilização suas classes, funções, variáveis, etc.
 
-A linguagem foi criada nos anos 80, por Guido Van Rossum. A ambição era que o Python sucedesse à linguagem ABC. Seu lançamento oficial data de 1991, com sua segunda versão lançada em 2000. Python 3.0 foi lançada em 2008 e rompeu com a compatibilidade com suas versões precedentes.
+<br />
 
-Pela sua simplicidade, o Python é adotado como linguagem principal a ser ensinada em cursos muito tradicionais, como o do MIT, por exemplo. Além disso, ela é amplamente utilizada na área de Ciência de Dados, bem como em aplicações web, automação de tarefas e aplicativos desktop.
+## Pacotes
 
-Entre as principais empresas que utilizam Python em seus produtos, estão: Google, Netflix, Facebook, Instagram, Quora, Spotify, Reddit e Globo.com.
+Pacotes são um conjunto de módulos e/ou pacotes, normalmente selecionados para a execução de tarefas similares. *Grosso modo* é uma pasta de arquivos e diretórios que pode conter vários módulos e pacotes.
 
-Muito do seu uso se dá por um fator que vai além da simplicidade de sua sintaxe: Python possui um sem-número de bibliotecas que facilitam as mais diversas tarefa. Isso por conta de uma comunidade fortemente engajada no desenvolvimento de ferramentas para a linguagem.
+Utilizamos o comando `import` para importar o pacote como um módulo, ou importar um módulo, constante ou função de um pacote:
+
+```
+$ import http # aqui importamos o pacote como um módulo
+$from http import client # aqui importamos um módulo de dentro do pacote http
+$ from http.client import HTTP_PORT # aqui importamos a variável HTTP_PORT dentro do módulo client que pertence ao módulo http
+```
+
+<br />
+
+## Ambiente Virtual
+
+<br />
+
+- `venv`: é um gerenciador de projetos do Python, que permite a utilização simultânea de versões diferentes de um mesmo projeto, em uma mesma máquina. A ideia é que esta ferramente cria ambientes virtuais de produção de projetos;
+> Executamos o `venv` através do comando: `python3 -m venv .venv`. Neste caso `.venv` será o nome do ambiente virtual criado.
+> Para ativarmos um ambiente vitual para o desenvolvimento de um projeto, devemos repetir esse passo:
+>
+>> `$source .venv/bin/activate`
+>
+> Podemos conferir se tudo deu certo, digitando o comando:
+>
+> >`$ which python3`
+>
+> O resultado será o caminho da aplicação, acrescido de `.venv/bin/python3`
+> 
+
+<br />
+
+## Entrada de Dados: `input()`
+
+<br />
+
+A função `input()` recebe dados de entrada do usuário, por padrão, através do prompt. O valor recebido nessa entrada é do tipo *string*(`str`).
+
+<br />
+
+## Entrada de Dados: módulo `sys`
+
+<br />
+
+Com esse módulo, escrevemos um script para receber dados que ficarão disponíveis no módulo `sys.argv`. O script é conforme o que segue:
+
+<br />
+
+```
+import sys
+
+
+if __name__ == "__main__":
+    for argument in sys.argv:
+        print("Received ->", argument)
+```
+
+<br />
+
+Se chamarmos no prompt a execução: `python3 arquivo.py 2 4 "teste"`, teremos a seguinte saída:
+
+
